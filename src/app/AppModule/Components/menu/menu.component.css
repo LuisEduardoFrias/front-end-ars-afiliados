@@ -1,0 +1,9 @@
+nav {
+    width: auto;
+    padding: 2px;
+    border: 1px solid lightgray;
+    border-radius: 15px 0px 0px 15px;
+    height: Calc(100vh - 135px);
+    overflow-y: auto;
+    background-color: rgba(163, 132, 30, 0.57);
+}

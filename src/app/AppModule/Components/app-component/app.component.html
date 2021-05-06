@@ -1,0 +1,48 @@
+<div class="container1">
+
+    <div class="row">
+      
+        <div id="divTop"></div>
+
+        <mat-toolbar id="toolbar">
+
+            <img routerLink="" id="logo" [ngClass]="{cursor:  isLogin}" 
+            [src]="logo" alt="Logo">
+
+            <label id="titulo">Afiliados</label>
+
+            <div id="DivProfile" (mouseleave)="MouseLeaveChangeOpcion()">
+
+                <mat-label class="laber" *ngIf="opcion">{{this.login.UserName()}}</mat-label>
+
+                <mat-label class="laber" id="laberProfile" *ngIf="opcion && isLogin" 
+                (click)="LogOut()">Cerrar sesión</mat-label>
+
+                <img id="ImgProfile" [ngClass]="{cursor: isLogin}" 
+                (click)="ClickChangeOpcion()" [src]="backGroundImg" alt="Profile" />
+
+            </div>
+
+        </mat-toolbar>
+
+    </div>
+
+    <div id="body">
+        
+        <menu [ngClass]="{menu: isLogin}"  *ngIf="isLogin">
+
+        </menu>
+    
+        <app-container id="container" [ngClass]="{container2: !isLogin}" 
+        [ngClass]="{container3: isLogin}">
+    
+        </app-container>
+
+    </div>
+
+</div>
+
+
+    
+
+

@@ -1,0 +1,22 @@
+mat-expansion-panel {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border-radius: 15px 15px;
+}
+
+mat-expansion-panel div {
+    float: right;
+    border-radius: 15px 15px;
+    width: 15%;
+}
+
+mat-expansion-panel div mat-expansion-panel-header mat-panel-title mat-icon {
+    margin-right: 5px;
+}
+
+mat-expansion-panel div mat-expansion-panel-header {
+    float: right;
+    border: 1px solid lightgray;
+    margin-bottom: 3px;
+    width: 110px;
+}

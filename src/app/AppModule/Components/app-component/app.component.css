@@ -1,0 +1,84 @@
+.container1 {
+    overflow: hidden;
+    padding: 10px;
+}
+
+#divTop {
+    margin: 10px;
+}
+
+#toolbar {
+    background: black;
+    margin-bottom: 20px;
+    height: 60px;
+    width: 100%;
+}
+
+#logo {
+    width: 200px;
+    height: 100px;
+}
+
+#titulo{
+    position: relative;
+    top: 10px;
+    color: white;
+    margin-left: 10px;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#DivProfile {
+    color: white;
+    position: absolute;
+    right: 10px;
+}
+
+#ImgProfile {
+    width: 50px;
+    height: 50px;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.laber {
+    margin: 3px;
+}
+
+#DivProfile #laberProfile:hover {
+    cursor: pointer;
+    color: grey;
+}
+
+#body{
+    display: flex;
+}
+
+.menu{
+    flex: 1 1 auto;
+    position: relative;
+    right: 40px;
+    margin-top: 16px;
+}
+
+#container{
+    margin-top: 16px;
+    border: 1px solid lightgray;
+    overflow-x: auto;
+    flex: 1 1 auto;
+    height: Calc(100vh - 140px);
+    overflow-x: auto;
+}
+
+.container2 {
+    width: 100%;
+    border-radius: 15px 15px 15px 15px;
+    float: right;
+}
+
+.container3 {
+    width: Calc(85% - 18px);
+    border-radius: 0px 15px 15px 0px;
+}
