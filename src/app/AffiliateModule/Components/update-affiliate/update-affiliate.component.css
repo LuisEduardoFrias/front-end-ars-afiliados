@@ -1,0 +1,15 @@
+h2 {
+    position:relative;
+    font-size: 35px;
+    color: white;
+    z-index: 9;
+    display: inline-block;
+    left: 10px;
+}
+
+#divHeader{
+    background-color: rgb(66, 66, 66);
+    height: 56px;
+    width: 100%;
+}
+

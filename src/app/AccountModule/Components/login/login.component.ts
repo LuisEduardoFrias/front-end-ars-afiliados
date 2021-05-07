@@ -31,14 +31,12 @@ export class LoginComponent
 
   LogIn() {
 
-    debugger;
+    this.invalidAccess = true;
 
     this.loginservice.Logging(this.form.value).subscribe(observer => {
 
-
-
       this.invalidAccess = true;
-      //this.router.navigate(['']);
+      this.router.navigate(['']);
     })
     
   }

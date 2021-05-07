@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 //Modules
 import { AccountRoutingModule } from './account-routing.module';
-import { ModuleModule } from '../../MaterialModule/module/module.module';
+import { MaterialModule } from '../../MaterialModule/material.module';
 
 ///component
 import {LoginComponent} from '../Components/login/login.component';
@@ -14,7 +14,7 @@ import {CreateAccountComponent} from '../Components/create-account/create-accoun
   imports: [
     CommonModule,
     AccountRoutingModule,
-    ModuleModule
+    MaterialModule
   ]
 })
 export class AccountModule { }

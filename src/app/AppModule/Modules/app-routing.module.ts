@@ -14,6 +14,11 @@ const routes: Routes = [
    .then(m => m.AccountModule)
 },
 {
+  path: 'afiliados', loadChildren: () =>
+  import('src/app/AffiliateModule/Modules/affiliate.module')
+  .then(m => m.AffiliateModule)
+},
+{
   path: '**', component: NoAuthorizationComponent,  pathMatch: 'full'
 }];
 

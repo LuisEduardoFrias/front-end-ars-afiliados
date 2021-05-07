@@ -1,0 +1,60 @@
+h2 {
+    position:relative;
+    font-size: 35px;
+    color: white;
+    z-index: 9;
+    display: inline-block;
+    left: 10px;
+}
+
+mat-paginator{
+    display: inline-block;
+    position:fixed;
+    right: 10px;
+    width: 300px;
+    border-radius: 0px 15px 0px  0px;
+}
+
+#divHeader{
+    background-color: rgb(66, 66, 66);
+    height: 56px;
+    width: Calc(100% + 67%);
+}
+
+#filtro{
+    margin-left: 5px;
+    margin-top: 5px;
+    width: 99%;
+}
+
+#divContainerTable {
+    margin-left: 10px;
+    height: 75%;
+    width: Calc(100% + 65%);
+}
+
+#verificador{
+    position:absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+
+th{
+  background-color: rgba(163, 132, 30, 0.57);
+}
+
+th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
+  padding-inline: 25px
+}
+
+app-verification {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+}
+
+
+  

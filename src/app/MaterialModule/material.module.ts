@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 //
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -14,26 +13,25 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSelectModule } from '@angular/material/select';
 import { MatNativeDateModule } from '@angular/material/core';
 
+const modules = [
+  MatToolbarModule,
+  MatFormFieldModule,
+  MatButtonModule,
+  MatIconModule,
+  MatInputModule,
+  MatExpansionModule,
+  ReactiveFormsModule,
+  MatDatepickerModule,
+  MatTableModule,
+  MatPaginatorModule,
+  MatSelectModule,
+  MatNativeDateModule,
+]
 
 @NgModule({
   declarations: [],  
-  exports: [
-    MatToolbarModule,
-    MatFormFieldModule,
-    MatButtonModule,
-    MatIconModule,
-    MatInputModule,
-    MatExpansionModule,
-    ReactiveFormsModule,
-    MatDatepickerModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSelectModule,
-    MatNativeDateModule
-  ],
-  imports: [
-    CommonModule
-  ]
+  exports: [ modules ],
+  imports: [ modules ]
 })
 
-export class ModuleModule { }
+export class MaterialModule { }

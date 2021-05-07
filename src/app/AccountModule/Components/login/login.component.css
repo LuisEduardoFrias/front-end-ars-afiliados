@@ -1,3 +1,8 @@
+.label {
+    position: absolute;
+    z-index: 9;
+}
+
 #titulo {
     font-size: 70px;
     left: 30%;
@@ -8,19 +13,14 @@
 #eslogan {
     font-size: 25px;
     left: 30%;
-    top: 30%;
+    top: 32%;
     color: rgb(163, 132, 30);
 }
 
 #background {
-    height: Calc(100vh - 120px);
+    height: 100%;
     width: 100%;
     border-radius: 15px 15px 15px 15px;
-}
-
-.label {
-    position: absolute;
-    z-index: 9;
 }
 
 mat-error {

@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 //Modules
 import { AppRoutingModule } from './app-routing.module';
-import { ModuleModule } from 'src/app/MaterialModule/module/module.module';
+import { MaterialModule } from 'src/app/MaterialModule/material.module';
 import { HttpClientModule } from '@angular/common/http';
 
 //components
@@ -22,8 +22,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ModuleModule,
+    MaterialModule,
     HttpClientModule
+  ],
+  exports:[
+    MaterialModule
   ],
   bootstrap: [AppComponent]
 })

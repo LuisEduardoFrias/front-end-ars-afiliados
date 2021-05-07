@@ -14,11 +14,15 @@ mat-expansion-panel div {
 }
 
 .mat-expansion-panel-header.mat-expanded {
-    height: 30px;
+    height: 20%;
 }
 
 .mat-expansion-panel-header.mat-expanded:hover {
     background-color: rgb(73, 73, 73);
+}
+
+.mat-expansion-panel:not([class*=mat-elevation-z]) {
+    cursor: pointer;
 }
 
 mat-expansion-panel-header {

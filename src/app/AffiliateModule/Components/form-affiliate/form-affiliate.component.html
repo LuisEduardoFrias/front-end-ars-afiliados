@@ -1,0 +1,117 @@
+
+<div id="divContainer">
+
+    <form (submit)="SendData()" [formGroup]="form">
+
+        <mat-form-field appearance="outline">
+    
+            <mat-label>Cédula ej: 00000000000*</mat-label>
+    
+            <input OnlyNumber formControlName="identificationCard" matInput>
+    
+            <mat-error *ngIf="form.invalid">
+                <mat-icon>error</mat-icon>{{ErrorFields("identificationCard")}}
+            </mat-error>
+    
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+    
+            <mat-label>Nombre*</mat-label>
+            <input formControlName="name" matInput>
+    
+            <mat-error *ngIf="form.invalid">
+                <mat-icon>error</mat-icon>{{ErrorFields("name")}}
+            </mat-error>
+    
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+    
+            <mat-label>Apellido*</mat-label>
+            <input formControlName="lastName" matInput>
+    
+            <mat-error *ngIf="form.invalid">
+                <mat-icon>error</mat-icon>{{ErrorFields("lastName")}}
+            </mat-error>
+    
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+    
+            <mat-label>Nacionalidad</mat-label>
+            <input formControlName="nacionality" matInput>
+    
+            <mat-error *ngIf="form.invalid">
+                <mat-icon>error</mat-icon>{{ErrorFields("nacionality")}}
+            </mat-error>
+    
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+    
+            <mat-label>Sexo</mat-label>
+    
+            <select formControlName="sex" matNativeControl required>
+            <option value="M">Masculimo</option>
+            <option value="F">Femenino</option>
+            </select>
+    
+        </mat-form-field>
+    
+        <mat-form-field id="NSS" appearance="outline">
+    
+            <mat-label>Número de seguridad social*</mat-label>
+            <input OnlyNumber formControlName="socialSecurityNumber" matInput>
+    
+            <mat-error *ngIf="form.invalid">
+                <mat-icon>error</mat-icon>{{ErrorFields("socialSecurityNumber")}}
+            </mat-error>
+    
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+    
+            <mat-label>Fecha de registro*</mat-label>
+    
+            <input formControlName="registrationDate" matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+    
+            <mat-error *ngIf="form.invalid">
+                <mat-icon>error</mat-icon>{{ErrorFields("registrationDate")}}
+            </mat-error>
+    
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+    
+            <mat-label>Plan</mat-label>
+    
+            <mat-select formControlName="planId">
+    
+                <mat-option *ngFor="let i of Plans" [value]="i.id">{{i.planName}}</mat-option>
+    
+            </mat-select>
+    
+            <mat-error *ngIf="form.invalid">
+                <mat-icon>error</mat-icon>{{ErrorFields("planId")}}
+            </mat-error>
+    
+        </mat-form-field>
+    
+        <div id="divContainerButtons" >
+    
+            <button [disabled]="form.disabled" mat-flat-button class="btn btn-success button">
+                Crear
+            </button>
+    
+            <button [disabled]="form.disabled" class="btn btn-danger button" routerLink="../">
+                Canselar
+            </button>
+        
+        </div>
+    
+    </form>
+
+</div>
