@@ -1,10 +1,5 @@
-.container1 {
-    overflow: hidden;
-    padding: 10px;
-}
-
-#divTop {
-    margin: 10px;
+#divToolbar {
+    height: 20px;
 }
 
 #toolbar {
@@ -19,7 +14,7 @@
     height: 100px;
 }
 
-#titulo{
+#titulo {
     position: relative;
     top: 10px;
     color: white;
@@ -52,33 +47,31 @@
     color: grey;
 }
 
-#body{
+#body {
+    width: 100%;
+    height: Calc(100% - 100px);
+    padding: 5px;
     display: flex;
 }
 
-.menu{
-    flex: 1 1 auto;
-    position: relative;
-    right: 40px;
-    margin-top: 16px;
+.menuLaterar {
+    width: 20%;
+    box-sizing: border-box;
+    margin: 0px;
+    margin-right: 5px;
+    padding-inline-start: 0px;
 }
 
-#container{
-    margin-top: 16px;
+#container {
     border: 1px solid lightgray;
-    overflow-x: auto;
-    flex: 1 1 auto;
-    height: Calc(100vh - 140px);
-    overflow-x: auto;
+}
+
+.container1 {
+    width: 85%;
+    border-radius: 0px 15px 15px 0px;
 }
 
 .container2 {
     width: 100%;
     border-radius: 15px 15px 15px 15px;
-    float: right;
-}
-
-.container3 {
-    width: Calc(85% - 18px);
-    border-radius: 0px 15px 15px 0px;
 }

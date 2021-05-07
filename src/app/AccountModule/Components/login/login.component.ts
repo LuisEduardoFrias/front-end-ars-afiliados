@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { LoginService } from 'src/app/AppModule/Services/login.service';
 
 @Component({
-  selector: 'app-login',
+  selector: 'login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
@@ -12,13 +12,13 @@ import { LoginService } from 'src/app/AppModule/Services/login.service';
 export class LoginComponent 
 {
   
-  public backGroundImg = "src/assets/images/Family.jpg";
-
+  public backGroundImg = "../../../../assets/images/Family.jpg";
+  public invalidAccess: boolean = false;
 
   public form = this.formbuild.group(
   {
-    Email: { '' : { Validators: [Validators.email] } },
-    Password: { '' : { Validators : [Validators.min(8)]}}
+      email: [ '', { Validators: [Validators.required, Validators.email] } ],
+      password: ['', { Validators: [Validators.required, Validators.min(8)] }]
   });
 
 
@@ -31,8 +31,14 @@ export class LoginComponent
 
   LogIn() {
 
+    debugger;
+
     this.loginservice.Logging(this.form.value).subscribe(observer => {
-      this.router.navigate(['']);
+
+
+
+      this.invalidAccess = true;
+      //this.router.navigate(['']);
     })
     
   }

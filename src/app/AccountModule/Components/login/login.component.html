@@ -1,24 +1,31 @@
-<Label id="titulo">Ars Afiliados</Label>
-<Label id="eslogan">Cuidando tu familia</Label>
+<Label class="label" id="titulo">Ars Afiliados</Label>
+<Label class="label" id="eslogan">Cuidando tu familia</Label>
 
-<img  id="background" [src]="backGroundImg"  alt="background">
+<img id="background" [src]="backGroundImg" alt="background">
 
 <form [formGroup]="form" (submit)="LogIn()">
 
+    <mat-error *ngIf="invalidAccess">
+        <mat-icon>error</mat-icon> Parte de su información es incorrecta. Inténtelo de nuevo.</mat-error>
+
     <mat-form-field appearance="outline">
+
         <mat-label>Usuario</mat-label>
-        <input formControlName="Email" matInput>
+        <input formControlName="email" matInput>
+
     </mat-form-field>
 
     <mat-form-field appearance="outline">
+
         <mat-label>Contraseña</mat-label>
-        <input type="Password" formControlName="Password" matInput>
+        <input type="Password" formControlName="password" matInput>
+
     </mat-form-field>
 
     <div id="ContenerdoBoton">
-        <button mat-flat-button routerLink="">Acceder</button>
+        <button mat-flat-button [disabled]="form.invalid">Acceder</button>
     </div>
 
-    <a id="linkCrearCuenta" routerLink='acount'>Clich <strong> aqui </strong> para crear cuenta</a>
+    <a id="linkCrearCuenta" routerLink='acount'>Click <strong> aqui </strong> para crear cuenta</a>
 
 </form>

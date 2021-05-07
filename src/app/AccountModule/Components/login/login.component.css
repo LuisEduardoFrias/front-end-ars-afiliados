@@ -18,9 +18,13 @@
     border-radius: 15px 15px 15px 15px;
 }
 
-label {
+.label {
     position: absolute;
     z-index: 9;
+}
+
+mat-error {
+    padding-bottom: 10px;
 }
 
 Form {
@@ -40,6 +44,10 @@ Form {
     box-shadow: 5px 5px 5px dimgrey;
     padding: 20px;
     text-align: center;
+}
+
+mat-label {
+    color: black;
 }
 
 #ContenerdoBoton {

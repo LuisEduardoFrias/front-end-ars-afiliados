@@ -11,7 +11,7 @@ import { HttpService } from './http-service';
 
 export class LoginService extends HttpService {
 
-  private login: boolean = true;
+  private login: boolean = false;
   private rol: string = "";
   private userName: string = "";
   private subject : Subject<boolean> = new Subject<boolean>();

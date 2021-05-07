@@ -1,0 +1,22 @@
+.label {
+    position: absolute;
+    z-index: 9;
+    color: rgb(163, 132, 30);
+    left: 30%;
+}
+
+#titulo {
+    font-size: 70px;
+    top: 20%;
+}
+
+#eslogan {
+    font-size: 25px;
+    top: 30%;
+}
+
+#backGroundImg {
+    height: 100%;
+    width: 100%;
+    border-radius: 0px 15px 15px 0px;
+}

@@ -1,48 +1,31 @@
-<div class="container1">
+<div id="divToolbar"></div>
+<mat-toolbar id="toolbar">
 
-    <div class="row">
-      
-        <div id="divTop"></div>
+    <img routerLink="" id="logo" [ngClass]="{cursor:  isLogin}" [src]="logo" alt="Logo">
 
-        <mat-toolbar id="toolbar">
+    <label id="titulo">Afiliados</label>
 
-            <img routerLink="" id="logo" [ngClass]="{cursor:  isLogin}" 
-            [src]="logo" alt="Logo">
+    <div id="DivProfile" (mouseleave)="MouseLeaveChangeOpcion()">
 
-            <label id="titulo">Afiliados</label>
+        <mat-label class="laber" *ngIf="opcion">{{this.login.UserName()}}</mat-label>
 
-            <div id="DivProfile" (mouseleave)="MouseLeaveChangeOpcion()">
+        <mat-label class="laber" id="laberProfile" *ngIf="opcion && isLogin" (click)="LogOut()">Cerrar sesión</mat-label>
 
-                <mat-label class="laber" *ngIf="opcion">{{this.login.UserName()}}</mat-label>
-
-                <mat-label class="laber" id="laberProfile" *ngIf="opcion && isLogin" 
-                (click)="LogOut()">Cerrar sesión</mat-label>
-
-                <img id="ImgProfile" [ngClass]="{cursor: isLogin}" 
-                (click)="ClickChangeOpcion()" [src]="backGroundImg" alt="Profile" />
-
-            </div>
-
-        </mat-toolbar>
+        <img id="ImgProfile" [ngClass]="{cursor: isLogin}" (click)="ClickChangeOpcion()" [src]="profile" alt="Profile" />
 
     </div>
 
-    <div id="body">
-        
-        <menu [ngClass]="{menu: isLogin}"  *ngIf="isLogin">
+</mat-toolbar>
 
-        </menu>
-    
-        <app-container id="container" [ngClass]="{container2: !isLogin}" 
-        [ngClass]="{container3: isLogin}">
-    
-        </app-container>
 
-    </div>
+<div id="body">
+
+    <menu class="menuLaterar" *ngIf="isLogin">
+
+    </menu>
+
+    <app-container id="container" [ngClass]="{container1: isLogin == true}" [ngClass]="{container2: isLogin != true}">
+
+    </app-container>
 
 </div>
-
-
-    
-
-

@@ -8,7 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 //components
 import { AppComponent } from '../Components/app-component/app.component';
-
+import { ContainerComponent } from '../Components/container/container.component';
 import { HomeComponent } from '../Components/home/home.component';
 import { MenuComponent } from '../Components/menu/menu.component';
 import { OptionMenuComponent } from '../Components/option-menu/option-menu.component';
@@ -16,7 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
-    AppComponent, HomeComponent, MenuComponent, OptionMenuComponent
+    AppComponent, HomeComponent, MenuComponent, OptionMenuComponent,ContainerComponent
   ],
   imports: [
     BrowserModule,
