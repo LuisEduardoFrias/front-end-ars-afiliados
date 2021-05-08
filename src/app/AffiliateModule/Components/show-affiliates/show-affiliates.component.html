@@ -6,7 +6,9 @@
 
 </div>
 
-<verification id="verificador" *ngIf="showComponentVerificate" (repost)='VerificateChangeStatusRegister($event)'></verification>
+<verification id="verificador" 
+Texto="Precione 'Acceptar' para verificar la desactivacion de este registro." 
+*ngIf="showComponentVerificate" (repost)='VerificateChangeStatusRegister($event)'></verification>
 
 <mat-form-field id="filtro">
     <mat-label>Filtro</mat-label>
@@ -74,7 +76,7 @@
 
         <ng-container matColumnDef="coverageAmount">
             <th mat-header-cell *matHeaderCellDef mat-sort-header> MONTO CONSUMIDO </th>
-            <td mat-cell *matCellDef="let element"> {{element.montoCobertura | currency}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.coverageAmount | currency}} </td>
         </ng-container>
 
         <ng-container matColumnDef="inactivate">
@@ -88,13 +90,6 @@
             <th mat-header-cell *matHeaderCellDef mat-sort-header> ACTUALIZAR </th>
             <td mat-cell *matCellDef="let element">
                 <button mat-flat-button class="btn btn-dark" (click)="Update(element.id)">Actualizar</button>
-            </td>
-        </ng-container>
-
-        <ng-container matColumnDef="updateAmount">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> ACTUALIZAR CONSUMO </th>
-            <td mat-cell *matCellDef="let element">
-                <button mat-flat-button class="btn btn-dark" (click)="UpdateAmount(element.id)">Actualizar monto</button>
             </td>
         </ng-container>
 

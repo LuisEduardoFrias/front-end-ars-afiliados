@@ -6,8 +6,8 @@ export class SubMenu{
 
     constructor(
         menuName: string,
-        routerLink: string,
-        icon: string
+        icon: string,
+        routerLink: string
     ) {
         this.menuName = menuName;
         this.routerLink = routerLink;

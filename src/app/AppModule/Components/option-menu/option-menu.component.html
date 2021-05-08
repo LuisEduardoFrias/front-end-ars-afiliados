@@ -1,6 +1,6 @@
 <mat-expansion-panel hideToggle *ngFor='let opM of optionsMenu'>
 
-    <mat-expansion-panel-header routerLink="{{opM.routerLink}}">
+    <mat-expansion-panel-header *ngIf='opM.routerLink === "" || opM.routerLink === undefined'>
 
         <mat-panel-title>
             <mat-icon>{{opM.icon}}</mat-icon> {{opM.menuName}}
@@ -8,7 +8,17 @@
 
     </mat-expansion-panel-header>
 
-    <div>
+
+    <mat-expansion-panel-header  *ngIf='opM.routerLink !== "" && opM.routerLink !== undefined'
+    routerLink="{{opM.routerLink}}" >
+
+       <mat-panel-title>
+           <mat-icon>{{opM.icon}}</mat-icon> {{opM.menuName}}
+       </mat-panel-title>
+
+    </mat-expansion-panel-header>
+
+    <div id="subMenu">
 
         <mat-expansion-panel-header routerLink="{{op.routerLink}}" *ngFor="let op of opM.subMenu">
 

@@ -1,15 +1,13 @@
-import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ShowAffiliate } from '../../../AppModule/Entities/affiliate/ShowAffiliate.model';
-import { UpdateAffiliate } from '../../../AppModule/Entities/affiliate//UpdateAffiliate.model';
+import { ShowAffiliate } from 'src/app/AppModule/Entities/affiliate/ShowAffiliate.model';
+import { UpdateAffiliate } from 'src/app/AppModule/Entities/affiliate//UpdateAffiliate.model';
 
 @Component({
   selector: 'app-update-affiliate',
   templateUrl: './update-affiliate.component.html',
-  styleUrls: ['./update-affiliate.component.css'],
-  providers:[DatePipe]
+  styleUrls: ['./update-affiliate.component.css']
 })
 export class UpdateAffiliateComponent implements OnInit {
 
@@ -19,8 +17,7 @@ export class UpdateAffiliateComponent implements OnInit {
 
   constructor(
     private router : Router,
-    private formBuild : FormBuilder,
-    private datePipe : DatePipe) 
+    private formBuild : FormBuilder) 
   {
     this.showAffiliate = this.router.getCurrentNavigation()?.extras?.state?.showAffiliate;
   }

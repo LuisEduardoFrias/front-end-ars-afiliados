@@ -1,6 +1,6 @@
 #backgroud {
-    background-color: rgba(0, 0, 0, 0.377);
-    width: 100vh;
+    background-color: rgba(51, 51, 51, 0.575);
+    width: 100vw;
     height: 100vh;
 }
 
@@ -22,11 +22,12 @@
     text-align: center;
 }
 
+button {
+    margin-left: 10px;
+}
+
 span {
     display: block;
     margin: 10px;
 }
 
-button {
-    margin-left: 10px;
-}

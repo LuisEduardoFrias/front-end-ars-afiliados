@@ -21,14 +21,14 @@ export class ShowAffiliatesComponent implements AfterViewInit
   public displayedColumns: string[] = ['identificationCard', 'name', 'lastName',
     'dateTime', 'nacionality', 'sex', 'socialSecurityNumber',
     'registrationDate', 'amountConsumed', 'status', 'planName',
-    'coverageAmount', 'inactivate', 'update', 'updateAmount'];
+    'coverageAmount', 'inactivate', 'update'];
   
   public dataSource: MatTableDataSource<ShowAffiliate> = new MatTableDataSource<ShowAffiliate>();
   public showComponentVerificate: boolean = false;
 
-  private showAffiliate: ShowAffiliate[] = [];
-  private deleteSubject : Subject<Boolean> = new Subject();
-  private navigationExtras?: NavigationExtras = undefined;
+  private showAffiliate: ShowAffiliate[];
+  private deleteSubject : Subject<Boolean>;
+  private navigationExtras: NavigationExtras;
 
   @ViewChild(MatPaginator) paginator : MatPaginator;
 
@@ -102,12 +102,6 @@ export class ShowAffiliatesComponent implements AfterViewInit
   Update(id: number)
   {
     this.Navegate(id, 'afiliados/actualizar');
-  }
-
-
-  UpdateAmount(id: number)
-  {
-    this.Navegate(id, 'afiliados/actualizar/monto');
   }
 
 

@@ -2,12 +2,14 @@
 
     <div id="panel">
 
-        <span>Precione Acceptar para verificar la desactivacion de este registro.</span>
+        <span>{{Texto}}</span>
 
         <div id="button">
-            <button (click)="Repost(true)" mat-flat-button color="primary">Acceptar</button>
 
-            <button (click)="Repost(false)" mat-flat-button color="primary">Cancelar</button>
+            <button (click)="Repost(true)" mat-flat-button class="btn btn-dark">Acceptar</button>
+
+            <button (click)="Repost(false)" mat-flat-button class="btn btn-dark">Cancelar</button>
+            
         </div>
 
     </div>

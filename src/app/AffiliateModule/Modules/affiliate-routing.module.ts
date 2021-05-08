@@ -4,7 +4,7 @@ import { ShowAffiliatesComponent } from 'src/app/AffiliateModule/Components/show
 import { CreateMedicalBillComponent } from 'src/app/AffiliateModule/Components/create-medical-bill/create-medical-bill.component';
 import { ShowMedicalBillComponent } from 'src/app/AffiliateModule/Components/show-medical-bill/show-medical-bill.component';
 import { UpdateAffiliateComponent } from 'src/app/AffiliateModule/Components/update-affiliate/update-affiliate.component';
-import { ShangeAmountAffiliateComponent } from 'src/app/AffiliateModule/Components/shange-amount-affiliate/shange-amount-affiliate.component';
+import { CreateAffiliateComponent } from 'src/app/AffiliateModule/Components/create-affiliate/create-affiliate.component';
 
 const routes: Routes = [
 {
@@ -14,13 +14,13 @@ const routes: Routes = [
   path:'actualizar', component:UpdateAffiliateComponent
 },
 {
-  path:'actualizar/monto', component:ShangeAmountAffiliateComponent
+  path:'crear', component:CreateAffiliateComponent
 },
 {
   path:'medicalBills', component:ShowMedicalBillComponent
 },
 {
-  path:'medicalBills/create', component:CreateMedicalBillComponent
+  path:'create', component:CreateMedicalBillComponent
 }];
 
 @NgModule({

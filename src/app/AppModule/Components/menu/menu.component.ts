@@ -20,18 +20,17 @@ export class MenuComponent implements OnInit {
 
   //menu options for administrators
   MenuOptionsForAdm: OptionsMenu[] = [
-    new OptionsMenu("Afiliados", "", "person_outline",
-      [ new SubMenu("Afiliados", "afiliados", "person_outline"),
-        new SubMenu("Crear Afiliados", "afiliados/crear", "person_add_alt"),
-        new SubMenu("Actualizar Monto", "afiliafos/actualizar/monto", "update")]),
+    new OptionsMenu("Afiliados", "person_outline", undefined,
+      [ new SubMenu("Afiliados", "person_outline", "afiliados"),
+        new SubMenu("Crear Afiliados", "person_add_alt", "afiliados/crear")]),
     
-    new OptionsMenu("Sucursales", "", "person_outline",
-      [ new SubMenu("Sucursales", "sucursales", "person_outline"),
-        new SubMenu("Create", "sucursales/crear", "person_outline")]),
+    new OptionsMenu("Sucursales", "local_hospital", undefined,
+      [ new SubMenu("Sucursales", "local_pharmacy", "sucursales"),
+        new SubMenu("Crear sucursal", "local_hospital", "sucursales/crear")]),
       
-    new OptionsMenu("Plan", "", "person_outline",
-      [ new SubMenu("Planes", "planes", "person_outline"),
-        new SubMenu("Crear Plan", "planes/crear", "person_add_alt"),])
+    new OptionsMenu("Plan", "receipt", undefined,
+      [ new SubMenu("Planes", "health_and_safety", "planes"),
+        new SubMenu("Crear Plan", "receipt_2", "planes/crear")])
 
   ]
 
@@ -44,12 +43,12 @@ export class MenuComponent implements OnInit {
         new SubMenu("Crear Facturas", "facturas/crear", "person_add_alt")]),
 
     new OptionsMenu("Sucursales", "", "person_outline",
-      [ new SubMenu("Ver Sucursales", "sucursales", "person_outline")])
+      [ new SubMenu("Ver Sucursales", "sucursales", "person_outline"),])
   ]
 
   //menu options for branches
   MenuOptionsForBranches: OptionsMenu[] = [
-    new OptionsMenu("ver Perfil", "Perfil", "person_outline", undefined),
+    new OptionsMenu("Perfil", "Perfil", "person_outline", undefined),
     
     new OptionsMenu("Service", "", "person_outline",
       [ new SubMenu("Ver Service", "service", "person_outline"),

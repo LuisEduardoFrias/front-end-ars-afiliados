@@ -26,6 +26,9 @@ export class FormAffiliateComponent implements OnInit {
   @Input()
   Form: FormGroup;
 
+  @Input()
+  bottonCreateUpdate: string = "Crear";
+
   Plans : ShowPlan[];
   
   form: FormGroup;

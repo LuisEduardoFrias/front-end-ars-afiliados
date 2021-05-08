@@ -4,7 +4,7 @@ mat-expansion-panel {
     border-radius: 15px 15px;
 }
 
-mat-expansion-panel div {
+mat-expansion-panel #subMenu {
     border-radius: 15px 15px;
     width: 100%;
 }
@@ -25,7 +25,7 @@ mat-expansion-panel div {
     cursor: pointer;
 }
 
-mat-expansion-panel-header {
+.mat-expansion-panel-header {
     border: 1px solid lightgray;
     margin-bottom: 3px;
 }
