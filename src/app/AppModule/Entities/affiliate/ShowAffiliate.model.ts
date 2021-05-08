@@ -13,7 +13,7 @@ export class ShowAffiliate implements UpdateAffiliate{
     socialSecurityNumber: string;
     registrationDate: Date;
     amountConsumed: number;
-    status: boolean;
+    status: string;
     planId: number;
     planName: string;
     coverageAmount: number;
@@ -29,7 +29,7 @@ export class ShowAffiliate implements UpdateAffiliate{
         socialSecurityNumber:  string,
         registrationDate: Date,
         amountConsumed: number,
-        status: boolean,
+        status: string,
         planId: number,
         planName: string,
         coverageAmount: number) {

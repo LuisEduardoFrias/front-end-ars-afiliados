@@ -18,7 +18,7 @@ import { DatePipe } from '@angular/common';
 export class ShowAffiliatesComponent implements AfterViewInit 
 {
 
-  public displayedColumns: string[] = ['id','identificationCard', 'name', 'lastName',
+  public displayedColumns: string[] = ['identificationCard', 'name', 'lastName',
     'dateTime', 'nacionality', 'sex', 'socialSecurityNumber',
     'registrationDate', 'amountConsumed', 'status', 'planName',
     'coverageAmount', 'inactivate', 'update', 'updateAmount'];

@@ -1,5 +1,5 @@
 h2 {
-    position:relative;
+    position: relative;
     font-size: 35px;
     color: white;
     z-index: 9;
@@ -7,45 +7,51 @@ h2 {
     left: 10px;
 }
 
-mat-paginator{
+mat-paginator {
     display: inline-block;
-    position:fixed;
+    position: fixed;
     right: 10px;
     width: 300px;
-    border-radius: 0px 15px 0px  0px;
+    border-radius: 0px 15px 0px 0px;
 }
 
-#divHeader{
+#divHeader {
     background-color: rgb(66, 66, 66);
     height: 56px;
-    width: Calc(100% + 67%);
+    width: Calc(100% + 100%);
 }
 
-#filtro{
+#filtro {
     margin-left: 5px;
     margin-top: 5px;
     width: 99%;
 }
 
+#id {
+    display: none;
+}
+
 #divContainerTable {
     margin-left: 10px;
-    height: 75%;
+    height: 0%;
     width: Calc(100% + 65%);
 }
 
-#verificador{
-    position:absolute;
+#verificador {
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 9;
 }
 
-th{
-  background-color: rgba(163, 132, 30, 0.57);
+th {
+    background-color: rgba(163, 132, 30, 0.57);
 }
 
-th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
-  padding-inline: 25px
+th.mat-header-cell,
+td.mat-cell,
+td.mat-footer-cell {
+    padding-inline: 25px
 }
 
 app-verification {
@@ -55,6 +61,3 @@ app-verification {
     transform: translate(-50%, -50%);
     z-index: 9;
 }
-
-
-  

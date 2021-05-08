@@ -12,7 +12,7 @@ export class UpdateAffiliate implements CreateAffiliate{
     socialSecurityNumber: string;
     registrationDate: Date;
     amountConsumed: number;
-    status: boolean;
+    status: string;
     planId: number;
     
     constructor(
@@ -26,7 +26,7 @@ export class UpdateAffiliate implements CreateAffiliate{
         socialSecurityNumber:  string,
         registrationDate: Date,
         amountConsumed: number,
-        status: boolean,
+        status: string,
         planId: number) {
         
         this.id = id;

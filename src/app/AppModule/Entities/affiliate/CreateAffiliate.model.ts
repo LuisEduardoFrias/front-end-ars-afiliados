@@ -1,16 +1,16 @@
 export class CreateAffiliate{
 
     identificationCard: string;
-    name : string;
-    lastName : string;
+    name: string;
+    lastName: string;
     dateTime: Date;
     nacionality: string;
     sex: string;
-    socialSecurityNumber:  string;
+    socialSecurityNumber: string;
     registrationDate: Date;
     amountConsumed: number;
-    status: boolean;
-    planId: number
+    status: string;
+    planId: number;
 
      constructor(
         identificationCard: string,
@@ -22,7 +22,7 @@ export class CreateAffiliate{
         socialSecurityNumber:  string,
         registrationDate: Date,
         amountConsumed: number,
-        status: boolean,
+        status: string,
         planId: number) {
         
         this.identificationCard = identificationCard ;
