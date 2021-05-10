@@ -35,10 +35,10 @@ export class FormAffiliateComponent implements OnInit {
 
   ngOnInit(): void {
   
-    this.planService.GetPlansWhereStatusTrue().subscribe(observer =>
+    /* this.planService.GetPlansWhereStatusTrue().subscribe(observer =>
     {
       this.Plans = observer;
-    })
+    }) */
 
     
     if(this.Form == null)

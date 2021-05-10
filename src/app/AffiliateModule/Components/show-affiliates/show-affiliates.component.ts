@@ -40,7 +40,7 @@ export class ShowAffiliatesComponent implements AfterViewInit
 
     this.dataSource = new MatTableDataSource(this.showAffiliate);
 
-   /*  this.affiliateService.GetAllAffiliate().subscribe(observer => {
+   /*this.affiliateService.GetAllAffiliate().subscribe(observer => {
 
       debugger;
 

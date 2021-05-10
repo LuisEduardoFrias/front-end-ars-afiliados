@@ -32,7 +32,7 @@ Form {
     z-index: 9;
     top: 60%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-10%, -50%);
     color: rgb(163, 132, 30);
     transform: translate();
     color: black;

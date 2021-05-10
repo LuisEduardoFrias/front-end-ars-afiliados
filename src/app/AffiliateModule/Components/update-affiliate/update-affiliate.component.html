@@ -1,3 +1,5 @@
 <headel-pag Titulo="Actualizar afiliado"></headel-pag>
 
-<form-affiliate bottonCreateUpdate="Actualizar" [Form]="form" (OnSubmit)="UpdateAffiliate($event)"></form-affiliate> 
+<!-- <form-affiliate bottonCreateUpdate="Actualizar" [Form]="form" (OnSubmit)="UpdateAffiliate($event)"></form-affiliate>  -->
+
+<form-shared bottonCreateUpdate="Crear" linkBrack="plans" [form]="this.form" [formShared]="this.formShared" (OnSubmit)="SendData($event)" (OnCancelation)="Cancelation()"></form-shared>

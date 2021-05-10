@@ -13,8 +13,7 @@ import { HomeComponent } from '../Components/home/home.component';
 import { MenuComponent } from '../Components/menu/menu.component';
 import { OptionMenuComponent } from '../Components/option-menu/option-menu.component';
 
-import { VerificationComponent} from '../../AppModule/shared/verification/verification.component';
-import { HeadelPagComponent}    from '../../AppModule/shared/headel-pag/headel-pag.component';
+
 
 @NgModule({
   declarations: [
@@ -23,9 +22,6 @@ import { HeadelPagComponent}    from '../../AppModule/shared/headel-pag/headel-p
     MenuComponent,
     OptionMenuComponent,
     ContainerComponent,
-    
-    VerificationComponent,
-    HeadelPagComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,9 +29,6 @@ import { HeadelPagComponent}    from '../../AppModule/shared/headel-pag/headel-p
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule
-  ],
-  exports:[
-    MaterialModule
   ],
   bootstrap: [AppComponent]
 })

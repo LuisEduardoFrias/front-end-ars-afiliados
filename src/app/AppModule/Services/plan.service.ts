@@ -20,10 +20,24 @@ export class PlanService extends HttpService  {
         return this.httpclien.get<ShowPlan[]>(`${this.apiUrl}api/plan`,
             { headers: { "Accept": "application/vnd.arsaffiliate.ado.get.plans+json" } })
     }
-
+/* 
     GetPlansWhereStatusTrue() : Observable<ShowPlan[]> {
         return this.httpclien.get<ShowPlan[]>(`${this.apiUrl}api/plan`,
             { headers: { "Accept": "application/vnd.arsaffiliate.efc.get.wherestatustrue.plans+json" } })
+    }
+ */
+    
+    GetPlansWhereStatusTrue() : ShowPlan[] {
+        return [
+            new ShowPlan(1, "BASIC", 25000, new Date, true),
+            new ShowPlan(1, "MAX", 25000, new Date, true),
+            new ShowPlan(1, "X", 25000, new Date, true),
+            new ShowPlan(1, "PLUS", 25000, new Date, true),
+            new ShowPlan(1, "X MAX", 25000, new Date, true),
+            new ShowPlan(1, "PLUS MAX", 25000, new Date, true),
+            new ShowPlan(1, "X PLUS", 25000, new Date, true),
+            new ShowPlan(1, "X PLUS MAX", 25000, new Date, true),
+        ]
     }
 
     SearchPlan(search:string) :Observable<ShowPlan> {

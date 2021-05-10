@@ -1,8 +1,10 @@
 //Modules
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BranchOfficeRoutingModule } from './branch-office-routing.module';
 import { MaterialModule } from '../../MaterialModule/material.module';
+import { AppModule } from '../../AppModule/Modules/app.module';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 //Components
 import { CreateBranchOfficeComponent } from 'src/app/BranchOfficeModule/Components/create-branch-office/create-branch-office.component';
@@ -12,9 +14,6 @@ import { ShowServicesComponent } from 'src/app/BranchOfficeModule/Components/sho
 import { UpdateBranchOfficeComponent } from 'src/app/BranchOfficeModule/Components/update-branch-office/update-branch-office.component';
 import { UpdateServiceComponent } from 'src/app/BranchOfficeModule/Components/update-service/update-service.component';
 
-import { VerificationComponent} from '../../AppModule/shared/verification/verification.component';
-import { HeadelPagComponent}    from '../../AppModule/shared/headel-pag/headel-pag.component';
-
 @NgModule({
   declarations: [
     CreateBranchOfficeComponent,
@@ -23,14 +22,14 @@ import { HeadelPagComponent}    from '../../AppModule/shared/headel-pag/headel-p
     ShowServicesComponent,
     UpdateBranchOfficeComponent,
     UpdateServiceComponent,
-        
-    VerificationComponent,
-    HeadelPagComponent,
   ],
   imports: [
     CommonModule,
     BranchOfficeRoutingModule,
-    MaterialModule
-  ]
+    MaterialModule,
+    AppModule,
+    SharedModule,
+  ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
 })
 export class BranchOfficeModule { }

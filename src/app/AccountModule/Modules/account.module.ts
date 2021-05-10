@@ -1,7 +1,6 @@
+//Modules
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-//Modules
 import { AccountRoutingModule } from './account-routing.module';
 import { MaterialModule } from '../../MaterialModule/material.module';
 
@@ -14,7 +13,12 @@ import {CreateAccountComponent} from '../Components/create-account/create-accoun
   imports: [
     CommonModule,
     AccountRoutingModule,
-    MaterialModule
+    MaterialModule,
+  ],
+  exports: [
   ]
 })
 export class AccountModule { }
+
+
+

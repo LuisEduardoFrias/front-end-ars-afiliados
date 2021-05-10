@@ -1,0 +1,54 @@
+h2 {
+    text-align: center;
+    font-size: 50px;
+}
+
+form {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+mat-form-field {
+    margin: 5px;
+}
+
+#divContainerButtons {
+    display: flex;
+}
+
+.button {
+    margin-left: 5px;
+    width: 300px;
+}
+
+#NSS {
+    width: 250px;
+}
+
+#Plan {
+    display: inline;
+    position: relative;
+    margin: 5px;
+    bottom: 5px;
+    padding: 19px;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 5px 5px;
+}
+
+#Plan mat-label {
+    margin-right: 10px;
+}
+
+#divContainer {
+    margin: auto;
+    margin-top: 15px;
+    width: 40%;
+    height: calc(100% - 80px);
+    padding: 10px;
+    overflow-y: auto;
+    border: 1px solid rgb(109, 109, 109);
+    border-radius: 15px 0px 0px 15px;
+    background-color: rgba(66, 66, 66);
+    color: white;
+}

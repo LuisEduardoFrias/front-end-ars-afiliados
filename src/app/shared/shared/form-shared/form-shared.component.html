@@ -1,0 +1,79 @@
+<div id="divContainer">
+
+    <form (submit)="SendData()" [formGroup]="form">
+
+        <ng-container *ngFor="let f of formShared">
+
+            <mat-form-field appearance="outline" *ngIf="f.formControlType === 0">
+
+                <mat-label>{{f.formLabel}}</mat-label>
+
+                <input OnlyNumber *ngIf="f.onlyNumber" formControlName="{{f.formControlName}}" matInput>
+
+                <input *ngIf="!f.onlyNumber" formControlName="{{f.formControlName}}" matInput>
+
+                <ng-container *ngFor="let e of f.hasError">
+
+                    <mat-error *ngIf='GetError("{{f.formControlName}}","{{e.error}}")'>
+                        <mat-icon>error</mat-icon>{{e.text}}
+                    </mat-error>
+
+                </ng-container>
+
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" *ngIf="f.formControlType === 1">
+
+                <mat-label>{{f.formLabel}}</mat-label>
+
+                <mat-select formControlName="{{f.formControlName}}">
+
+                    <mat-option *ngFor="let i of f.select" [value]="i.keyCode">{{i.value}}</mat-option>
+
+                </mat-select>
+
+                <ng-container *ngFor="let e of f.hasError">
+
+                    <mat-error *ngIf="this.form.get('{{f.formControlName}}')?.hasError('{{e.error}}')">
+                        <mat-icon>error</mat-icon>{{e.text}}
+                    </mat-error>
+
+                </ng-container>
+
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" *ngIf="f.formControlType === 2">
+
+                <mat-label>{{f.formLabel}}</mat-label>
+
+                <input formControlName="{{f.formControlName}}" matInput [matDatepicker]="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+
+                <ng-container *ngFor="let e of f.hasError">
+
+                    <mat-error *ngIf="this.form.get('{{f.formControlName}}')?.hasError('{{e.error}}')">
+                        <mat-icon>error</mat-icon>{{e.text}}
+                    </mat-error>
+
+                </ng-container>
+
+            </mat-form-field>
+
+        </ng-container>
+
+        <div id="divContainerButtons">
+
+            <button [disabled]="!form.invalid" mat-flat-button class="btn btn-success button">
+                {{bottonCreateUpdate}}
+            </button>
+
+            <button class="btn btn-danger button" (click)="Cancelation()">
+                Cancelar
+            </button>
+
+        </div>
+
+    </form>
+
+</div>
